@@ -8,3 +8,4 @@ El procedimiento de registro de gastos y ventas es un proceso que puede ser  te
 Adicionalmente, debido a que las transacciones contables son  supremamente delicadas, el sistema debería permitir llevar una trazabilidad  de quién registró cada transacción, por lo cual el sistema debe contar con un  sistema de autenticación.
 
 </aside>
+
