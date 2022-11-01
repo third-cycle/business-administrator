@@ -29,6 +29,12 @@ public class EmployeesController {
         return this.employee2Service1.getRepository2( id);
     }
 
+    //CONSULTAR POR NAME
+    @GetMapping("/userName/{name}")
+    public Employee2 employee2s(@PathVariable String name){
+        return this.employee2Service1.getRepository3( name);
+    }
+
 
     //BORRAR EMPLEADO
     @DeleteMapping("/deleteUser/{id}")

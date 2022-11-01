@@ -38,6 +38,16 @@ public class Employee2Service {
 
     };
 
+    public Employee2 getRepository3(String name){
+
+        Optional<Employee2> employeeOne = Optional.ofNullable(this.employeeRepository1.findByName(name));
+
+        if (employeeOne.isPresent()){
+            return employeeOne.get();
+        } else {return new Employee2();}
+
+    };
+
     public Employee2 newEmployee2(Employee2 request){
         return this.employeeRepository1.save(request);
     }
