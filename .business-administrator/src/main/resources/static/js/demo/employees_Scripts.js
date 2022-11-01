@@ -8,7 +8,7 @@ $(document).ready(function() {
 
 async function loadEmployees() {
 
-    const request = await fetch('/employees',{
+    const request = await fetch('/users',{
       method: 'GET',
       HEADERS: {
         'Accept': 'application/json',
@@ -26,10 +26,14 @@ async function loadEmployees() {
           <td>`+employees[i].email+`</td>
           <td>`+employees[i].role+`</td>
           <td>`+employees[i].enterprise+`</td>
-          <td><a href="#" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></a></td>
-          </tr>`;
+          <td><button id="remove" employeesID=`
+            +employees[i].id+
+            `"href="#" class="btn btn-danger btn-circle btn-sm"><i class="fas fa-trash"></i></button></td>          
+        </tr>`;
 
         $('#EmployeeTable').append(tr)
+
+
 
     }
 }
